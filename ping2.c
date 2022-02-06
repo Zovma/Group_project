@@ -104,6 +104,9 @@ int rlup() {
         arr[lr1][5] = ' ';
         arr[lr2][5] = ' ';
         arr[lr3][5] = ' ';
+        if( rr1 == 0){
+            return 0;
+        }
         lr1-=1;
         lr2-=1;
         lr3-=1;
@@ -117,6 +120,9 @@ int rldown() {
         arr[lr1][5] = ' ';
         arr[lr2][5] = ' ';
         arr[lr3][5] = ' ';
+        if( lr3 == 24){
+            return 0;
+        }
         lr1+=1;
         lr2+=1;
         lr3+=1;
@@ -130,12 +136,15 @@ int rrup() {
         arr[rr1][74] = ' ';
         arr[rr2][74] = ' ';
         arr[rr3][74] = ' ';
+        if( rr1 == 0){
+            return 0;
+        }
         rr1-=1;
         rr2-=1;
         rr3-=1;
-        arr[rr1][73] = '|';
-        arr[rr2][73] = '|';
-        arr[rr3][73] = '|';
+        arr[rr1][74] = '|';
+        arr[rr2][74] = '|';
+        arr[rr3][74] = '|';
         return 0;
 }
 
@@ -143,6 +152,9 @@ int rrdown() {
         arr[rr1][74] = ' ';
         arr[rr2][74] = ' ';
         arr[rr3][74] = ' ';
+        if( rr3 == 24){
+           return 0;
+        }
         rr1+=1;
         rr2+=1;
         rr3+=1;
@@ -196,21 +208,21 @@ int mvBall(){
     // if(ballY >= 24){
     //     course++;
     // }
-    if(ballX >= 72 && (ballY == rr2 || ballY == rr1 || ballY == rr3) && (ballY > sbY && ballX > sbX)){  //правая ракетка
+    if((ballX == 73 || ballX == 74) && (ballY == rr2 || ballY == rr1 || ballY == rr3) && (ballY > sbY && ballX > sbX)){  //правая ракетка
         course = 2;
     }
 
-    if(ballX >= 72 && (ballY == rr2 || ballY == rr1 || ballY == rr3) && (ballY < sbY && ballX > sbX)){  //правая ракетка
+    if((ballX == 73 || ballX == 74) && (ballY == rr2 || ballY == rr1 || ballY == rr3) && (ballY < sbY && ballX > sbX)){  //правая ракетка
         course = 3;
     }
 
 
 
-    if(ballX <= 7 && (ballY == lr2 || ballY == lr1 || ballY == lr3) && (ballY > sbY && ballX < sbX)){ // левая ракетка
+    if((ballX == 7 || ballX == 6)&& (ballY == lr2 || ballY == lr1 || ballY == lr3) && (ballY > sbY && ballX < sbX)){ // левая ракетка
         course = 1;
     }
 
-    if(ballX <= 7 && (ballY == lr2 || ballY == lr1 || ballY == lr3) && (ballY < sbY && ballX < sbX)){ // левая ракетка
+    if((ballX == 7 || ballX == 6) && (ballY == lr2 || ballY == lr1 || ballY == lr3) && (ballY < sbY && ballX < sbX)){ // левая ракетка
         course = 4;
     }
 
