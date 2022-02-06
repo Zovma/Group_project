@@ -66,7 +66,10 @@ int coincidence(int n)
 }
 
 int rlup()
-{
+{   
+    if(lr1 == 0){
+        return 0;
+    }
     lr1 -= 1;
     lr2 -= 1;
     lr3 -= 1;
@@ -74,7 +77,10 @@ int rlup()
 }
 
 int rldown()
-{
+{   
+    if(lr3 == 24){
+        return 0;
+    } 
     lr1 += 1;
     lr2 += 1;
     lr3 += 1;
@@ -82,7 +88,10 @@ int rldown()
 }
 
 int rrup()
-{
+{   
+    if(rr1 == 0){
+        return 0;
+    }
     rr1 -= 1;
     rr2 -= 1;
     rr3 -= 1;
@@ -90,7 +99,10 @@ int rrup()
 }
 
 int rrdown()
-{
+{   
+    if(rr3 == 24){
+        return 0;
+    }
     rr1 += 1;
     rr2 += 1;
     rr3 += 1;
