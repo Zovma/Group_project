@@ -197,129 +197,18 @@ int print() {
                 continue;
             }
 
-            if (x == 40 && y == 1) {
+            if (x == 40 &&  ((y > 0) && (y < 24))) {
                 printf("|");
                 continue;
             }
-
-            if (x == 40 && y == 2) {
+            if (x == 5 && (lr1 == y || lr2 == y || lr3 == y)) {
                 printf("|");
                 continue;
             }
-
-            if (x == 40 && y == 3) {
+            if (x == 74 && (rr1 == y || rr2 == y || rr3 == y)) {
                 printf("|");
                 continue;
             }
-
-            if (x == 40 && y == 4) {
-                printf("|");
-                continue;
-            }
-
-            if (x == 40 && y == 5) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 6) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 7) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 8) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 9) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 10) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 11) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 12) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 13) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 14) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 15) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 16) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 17) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 18) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 19) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 20) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 21) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 22) {
-                printf("|");
-                continue;
-            }
-            if (x == 40 && y == 23) {
-                printf("|");
-                continue;
-            }
-
-            if (lr1 == y && x == 5) {
-                printf("|");
-                continue;
-            }
-            if (lr2 == y && x == 5) {
-                printf("|");
-                continue;
-            }
-            if (lr3 == y && x == 5) {
-                printf("|");
-                continue;
-            }
-
-            if (rr1 == y && x == 74) {
-                printf("|");
-                continue;
-            }
-            if (rr2 == y && x == 74) {
-                printf("|");
-                continue;
-            }
-            if (rr3 == y && x == 74) {
-                printf("|");
-                continue;
-            }
-
             if (x == 35 && y == 5) {
                 if (leftPl > 9) {
                     x++;
