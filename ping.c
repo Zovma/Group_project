@@ -37,19 +37,19 @@ int main() {
 
 int coincidence(int n) {
     switch (n) {
-    case 97:
+    case 65:
         rlup();
         mvBall();
         break;
-    case 122:
+    case 90:
         rldown();
         mvBall();
         break;
-    case 107:
+    case 75:
         rrup();
         mvBall();
         break;
-    case 109:
+    case 77:
         rrdown();
         mvBall();
         break;
